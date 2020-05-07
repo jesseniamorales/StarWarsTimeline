@@ -63,10 +63,11 @@ about {
 
 
 img {
-  /* display: inline-block; */
+  display: inline-block;
   width: 135px;
   height: 160px;
-  /* vertical-align: bottom; */
+  align-items: center;
+
 }
 
 a {

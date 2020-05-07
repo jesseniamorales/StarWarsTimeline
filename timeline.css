@@ -1,0 +1,222 @@
+@font-face {
+  font-family: 'star_jediregular';
+  src: url('starjedi-webfont.woff2') format('woff2'),
+       url('starjedi-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: normal 16px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background: #000000;
+  color: #fff;
+  overflow-x: hidden;
+  padding-bottom: 50px;
+}  
+
+.intro {
+  background: url(images/starbg.jpg);
+  padding: 100px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'star_jediregular';
+  font-size: 4.5rem;
+  text-align: center;
+  line-height: 5px;
+  letter-spacing: 2px;
+  color: yellow;
+}
+
+h2 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+h3 {
+  font-family: 'star_jediregular';
+  font-size: 3rem;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 2px;
+  color: yellow;
+}
+
+about {
+  background-color: #000000;
+}
+
+
+img {
+  /* display: inline-block; */
+  width: 135px;
+  height: 160px;
+  /* vertical-align: bottom; */
+}
+
+a {
+  color: yellow;
+}
+
+info {
+  color: red;
+}
+
+warning {
+  color: red;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.outro {
+  background: url(images/starbg.jpg);
+  padding: 100px 0;
+  text-align: center;
+  font-size: 2rem;
+  color: yellow;
+  font-weight: bold;
+}
+
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline movie {
+  font-family: 'star_jediregular';
+  font-size: 2rem;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 2px;
+  color: yellow;
+
+}
+
+.timeline time {
+  font-size: 2rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.timeline ul {
+  background: #003b59;
+  padding: 50px 0;
+}
+
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #fff;
+}
+
+.timeline ul li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;
+}
+
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+  background: #000000;
+}
+
+.timeline ul li div::before {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) div {
+  left: 45px;
+}
+
+.timeline ul li:nth-child(odd) div::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #000000 transparent transparent;
+}
+
+.timeline ul li:nth-child(even) div {
+  left: -475px;
+}
+
+.timeline ul li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent #000000;
+}
+
+movie {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: yellow;
+  margin-bottom: 8px;
+}
+
+time {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+
+/* EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul li::after {
+  transition: background .5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+  background: #000000;
+}
+
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) div {
+  transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul li:nth-child(even) div {
+  transform: translate3d(-200px, 0px, 0);
+}
+
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
